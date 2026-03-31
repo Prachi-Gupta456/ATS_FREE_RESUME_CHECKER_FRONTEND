@@ -3,7 +3,7 @@ const URL = process.env.NEXT_PUBLIC_BACKEND_API_URL
 
 export const uploadFile = async (data) => {
    try {
-      const result = await axios.post(`${URL}/upload`, data)
+      const result = await axios.post(`${URL}/api/resume/upload`, data)
       console.log(result.data)
       return result.data
    }
@@ -20,7 +20,7 @@ export const uploadFile = async (data) => {
 
 export const getResumeData = async (resumeId) => {
    try {
-      const result = await axios.get(`${URL}/${resumeId}`)
+      const result = await axios.get(`${URL}/api/resume/${resumeId}`)
       return result.data
    }
    catch (error) {
@@ -36,7 +36,7 @@ export const getResumeData = async (resumeId) => {
 
 export const getJobSpecificInsights = async (jobDescription,resumeId) => {
    try {
-      const result = await axios.post(`${URL}/jd`,{role:jobDescription,resumeId:resumeId})
+      const result = await axios.post(`${URL}/api/resume/jd`,{role:jobDescription,resumeId:resumeId})
       return result.data
    }
    catch (error) {
@@ -52,7 +52,7 @@ export const getJobSpecificInsights = async (jobDescription,resumeId) => {
 
 export const evaluateResume = async(resumeId)=>{
     try {
-      const result = await axios.get(`${URL}/analyze/${resumeId}`)
+      const result = await axios.get(`${URL}/api/resume/analyze/${resumeId}`)
       return result.data
    }
    catch (error) {
