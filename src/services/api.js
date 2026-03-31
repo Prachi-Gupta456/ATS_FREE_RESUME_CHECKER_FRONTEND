@@ -13,7 +13,7 @@ export const uploadFile = async (data) => {
          console.log("Backend error : ", error.response.data.msg)
          return error.response.data
       }
-      console.log("Error Occurred in file upload 👉", error.messaage)
+      console.log("Error Occurred in file upload 👉", error.message)
       return { success: false, msg: "Server Error..." }
    }
 }

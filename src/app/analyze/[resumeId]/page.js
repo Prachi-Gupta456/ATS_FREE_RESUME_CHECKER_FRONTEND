@@ -1,5 +1,5 @@
 "use client"
-import { getJobSpecificInsights, evaluateResume,getResumeData } from "@/app/services/page"
+import { getJobSpecificInsights, evaluateResume,getResumeData } from "@/services/api"
 import { useParams } from "next/navigation"
 import Image from "next/image"
 import {  useEffect, useState,useRef } from "react"

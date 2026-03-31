@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import '../../Styles/uploadBtnStyle.css'
-import { uploadFile } from '@/app/services/page'
+import { uploadFile } from '@/services/api'
 import Loader from '../loader/page'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
